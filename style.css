@@ -1,0 +1,151 @@
+*{
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+body{
+    background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+html,body{
+	height: 100%;
+	width: 100%;
+}
+ #container{
+ 	width: 350px;
+ 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+ 	height: 90%;
+ 	color: black;	
+ }
+ #container h1{
+	 margin: 20px auto;
+	 text-shadow: 2px 2px 3px #00000050;
+ }
+ #container ul{
+	 margin: 10px;
+	 padding: 0;
+	 width: 70%;
+	 height: 55%;
+	 display: flex;
+	 flex-direction: column;
+     overflow: auto;
+ }
+ #container ul li{
+	position: relative;
+	display: block;
+	list-style: none; 
+ 	width: 100%;
+	height: fit-content;
+ 	margin: 3px auto;
+ }
+ #container ul li label{
+	display: block;
+	word-wrap: break-word;
+	position: relative;
+	left: 45px;
+ 	width: 75%;
+    line-height: 40px;
+	font-size: 18px;
+ }
+ #container ul li #check{
+	position: absolute;
+	left: 0;
+    width: 30px;
+    height: 30px;
+	margin: 5px;
+	cursor: pointer;
+ }
+ .completed{
+ 	text-decoration: line-through;
+	color: rgba(0,0,0,0.3);
+ }
+ #container #controls{
+ 	width: 60%;
+ 	margin: 0;
+ }
+ #container #controls #input{
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    padding-left: 5px;
+    box-sizing: border-box;
+	margin-bottom: 20px;
+	border: none;
+    border-bottom: 2px solid #00CCCD;
+ }
+ #container #controls #input:focus{
+ 	outline: 0;
+ }
+ #container #controls #add{
+ 	background-color: #00CCCD;
+ 	border-radius: 25px;
+ }
+ #container #controls button{
+ 	width: 100%;
+ 	color: white;
+	border: none;
+ 	height: 40px;
+	margin: 5px auto;
+	cursor: pointer;
+	box-shadow: 3px 3px 3px #00000050;
+ }
+ #container #controls button:focus{
+ 	outline: 0;
+ }
+ #container #controls #remove{
+ 	background-color: #1287A5;
+ 	border-radius: 25px;
+ }
+ #container .mycheck{
+ 	border-radius: 10px;
+ }
+ p{
+	text-align: center;
+ } 
+  input[type="checkbox"] {	  
+    -webkit-appearance: none;
+    background-color: white;
+    border: 0px solid #1287A5;
+    padding: 9px;
+    border-radius: 30px;
+    position: relative;
+	box-shadow: 2px 2px 5px #00000050, -2px -2px 5px #ffffff50;
+}
+
+ input[type="checkbox"]:checked {
+    background-color: #1287A5;
+    color: #fff;
+}
+
+ input[type="checkbox"]:checked:after {
+    content: '\2714';
+	line-height: 30px;
+	font-size: 1.5rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+    position: absolute;
+    color: #fff;
+    font-family: "FontAwesome";
+}
+input[type="checkbox"]:focus{
+	outline: none;
+}
+ @media screen and (max-width:500px){
+	 #container{
+		 width: 100%;
+	 }
+	*{
+		-webkit-tap-highlight-color: transparent;
+	}
+ }
+ @media screen and (min-width:1000px){
+	#container #controls button:hover{
+		transform: scale(1.05);
+	}
+}
